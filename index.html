@@ -1,1 +1,485 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Masoud Ardeshiri - electrical engineer and Ph.D. researcher specializing in power electronics, electric drives, renewable energy, and energy storage.">
+  <meta name="theme-color" content="#08182f">
+  <title>Masoud Ardeshiri | Electrical Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308182f'/%3E%3Cpath d='M13 42h8l6-21 8 27 6-18 4 12h6' fill='none' stroke='%232de0c4' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #0c1829;
+      --navy: #08182f;
+      --navy-2: #102b4f;
+      --paper: #f4f7fb;
+      --white: #ffffff;
+      --muted: #556579;
+      --line: #d9e2ee;
+      --cyan: #18b9aa;
+      --cyan-light: #bff8ee;
+      --blue: #2176d2;
+      --shadow: 0 20px 55px rgba(7, 28, 56, 0.12);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .shell { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .skip-link { position: fixed; left: 18px; top: -60px; z-index: 100; background: white; padding: 10px 14px; border-radius: 8px; }
+    .skip-link:focus { top: 18px; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      color: white;
+      background: rgba(8, 24, 47, 0.94);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+    }
+    .nav-wrap { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { text-decoration: none; font-weight: 800; letter-spacing: -0.02em; font-size: 1.05rem; }
+    .brand span { color: var(--cyan-light); }
+    nav { display: flex; align-items: center; gap: 26px; }
+    nav a { color: #d9e9fb; text-decoration: none; font-weight: 650; font-size: 0.9rem; }
+    nav a:hover, nav a:focus-visible { color: white; }
+    .nav-cta { border: 1px solid rgba(191, 248, 238, 0.5); padding: 8px 13px; border-radius: 999px; }
+    .menu-button { display: none; border: 0; background: transparent; color: white; padding: 8px; font: inherit; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px),
+        radial-gradient(circle at 76% 28%, rgba(24,185,170,.24), transparent 31%),
+        linear-gradient(135deg, #08182f 0%, #0d284a 62%, #12385e 100%);
+      background-size: 42px 42px, 42px 42px, auto, auto;
+      padding: 92px 0 78px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      right: -130px;
+      bottom: -160px;
+      border: 52px solid rgba(45, 224, 196, 0.12);
+      border-radius: 50%;
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr); gap: 70px; align-items: end; position: relative; z-index: 1; }
+    .eyebrow { margin: 0 0 18px; color: var(--cyan-light); font-size: .82rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 800px; font-size: clamp(3rem, 7vw, 5.9rem); line-height: .95; letter-spacing: -.055em; }
+    .hero-title { margin: 26px 0 0; max-width: 760px; font-size: clamp(1.08rem, 2vw, 1.42rem); color: #d8e8f8; font-weight: 500; }
+    .accent-rule { width: 84px; height: 5px; margin: 28px 0; border-radius: 999px; background: var(--cyan); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 19px; border-radius: 12px; border: 1px solid transparent; text-decoration: none; font-weight: 800; }
+    .button-primary { color: var(--navy); background: var(--cyan-light); }
+    .button-primary:hover { background: white; }
+    .button-secondary { color: white; border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.06); }
+    .button-secondary:hover { background: rgba(255,255,255,.12); }
+    .hero-meta { border-left: 1px solid rgba(255,255,255,.2); padding-left: 28px; display: grid; gap: 24px; }
+    .meta-item small { display: block; color: #91a8c1; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; font-size: .73rem; }
+    .meta-item strong { display: block; margin-top: 4px; font-size: 1rem; line-height: 1.35; }
+
+    main { padding-bottom: 90px; }
+    section { scroll-margin-top: 92px; }
+    .intro { margin-top: -28px; position: relative; z-index: 3; }
+    .intro-card { display: grid; grid-template-columns: .72fr 1.28fr; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .intro-label { background: var(--cyan); color: #04231f; padding: 42px; display: flex; flex-direction: column; justify-content: space-between; }
+    .intro-label span { font-size: .78rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+    .intro-label strong { font-size: clamp(1.7rem, 3vw, 2.7rem); line-height: 1.05; letter-spacing: -.04em; }
+    .intro-copy { padding: 46px 50px; }
+    .intro-copy p { margin: 0; font-size: 1.08rem; color: #324155; }
+
+    .section-block { padding-top: 92px; }
+    .section-heading { display: grid; grid-template-columns: 240px 1fr; gap: 44px; align-items: start; margin-bottom: 38px; }
+    .section-kicker { margin: 7px 0 0; color: var(--cyan); font-size: .78rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+    h2 { margin: 0; font-size: clamp(2.1rem, 4vw, 3.6rem); line-height: 1.03; letter-spacing: -.045em; }
+    .section-lead { margin: 12px 0 0; color: var(--muted); max-width: 650px; }
+
+    .role-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .role-card { min-height: 150px; padding: 23px; background: white; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 8px 26px rgba(12,24,41,.05); }
+    .role-index { display: block; color: var(--cyan); font-weight: 900; font-size: .75rem; letter-spacing: .12em; }
+    .role-card h3 { margin: 23px 0 0; font-size: 1.04rem; line-height: 1.3; }
+
+    .experience-list { border-top: 1px solid var(--line); }
+    .experience-item { display: grid; grid-template-columns: 240px 1fr; gap: 44px; padding: 38px 0; border-bottom: 1px solid var(--line); }
+    .experience-when { color: var(--blue); font-weight: 850; }
+    .experience-when span { display: block; margin-top: 3px; color: var(--muted); font-weight: 550; }
+    .experience-item h3 { margin: 0; font-size: 1.42rem; letter-spacing: -.025em; }
+    .experience-company { margin: 4px 0 14px; color: var(--muted); font-weight: 750; }
+    .experience-item ul, .education-card ul { margin: 0; padding-left: 20px; color: #334356; }
+    .experience-item li + li, .education-card li + li { margin-top: 7px; }
+
+    .expertise-layout { display: grid; grid-template-columns: 1.3fr .7fr; gap: 24px; }
+    .panel { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 36px; }
+    .panel-dark { color: white; background: var(--navy); border-color: var(--navy); }
+    .panel h3 { margin: 0 0 24px; font-size: 1.35rem; }
+    .skill-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 11px; }
+    .skill { padding: 13px 14px; border-radius: 10px; color: #203249; background: #eef3f8; font-weight: 680; line-height: 1.35; }
+    .panel-dark .skill { color: #eaf4ff; background: rgba(255,255,255,.08); }
+    .stack { display: grid; gap: 24px; }
+    .software-cloud { display: flex; flex-wrap: wrap; gap: 9px; }
+    .software-cloud span { padding: 8px 11px; border-radius: 999px; color: #dbe9f7; border: 1px solid rgba(255,255,255,.18); font-size: .9rem; }
+    .language { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+    .language:last-child { border-bottom: 0; }
+    .language strong { display: block; }
+    .language span { color: var(--muted); font-size: .92rem; }
+    .language-level { color: var(--cyan); font-weight: 900; letter-spacing: .07em; }
+
+    .education-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .education-card { background: white; border-radius: 18px; border: 1px solid var(--line); padding: 28px; }
+    .education-card.featured { border-top: 5px solid var(--cyan); }
+    .degree-tag { color: var(--blue); font-weight: 900; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+    .education-card h3 { margin: 12px 0 4px; font-size: 1.25rem; line-height: 1.25; }
+    .school { margin: 0; color: var(--muted); font-weight: 750; }
+    .years { margin: 5px 0 22px; color: var(--cyan); font-weight: 850; }
+    .education-card ul { font-size: .94rem; }
+
+    .compact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; }
+    .clean-list { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px 28px; list-style: none; }
+    .clean-list li { position: relative; padding-left: 18px; }
+    .clean-list li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); }
+
+    .contact-card { margin-top: 92px; position: relative; overflow: hidden; color: white; background: linear-gradient(135deg, var(--navy), var(--navy-2)); border-radius: var(--radius); padding: 50px; }
+    .contact-card::before { content: ""; position: absolute; inset: auto -80px -160px auto; width: 330px; height: 330px; border: 55px solid rgba(45,224,196,.12); border-radius: 50%; }
+    .contact-layout { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
+    .contact-card h2 { max-width: 700px; }
+    .contact-card p { margin: 18px 0 0; color: #c9daeb; }
+    .contact-links { display: grid; gap: 10px; min-width: 250px; }
+    .contact-links a { color: white; text-decoration: none; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); overflow-wrap: anywhere; }
+    .contact-links a:hover { background: rgba(255,255,255,.12); }
+
+    footer { padding: 28px 0 40px; color: var(--muted); font-size: .88rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .intro-card, .expertise-layout, .contact-layout { grid-template-columns: 1fr; }
+      .hero-meta { border-left: 0; border-top: 1px solid rgba(255,255,255,.2); padding: 26px 0 0; grid-template-columns: repeat(3,1fr); }
+      .intro-label { min-height: 170px; }
+      .role-grid { grid-template-columns: repeat(2, 1fr); }
+      .education-grid { grid-template-columns: 1fr; }
+      .contact-links { min-width: 0; }
+    }
+
+    @media (max-width: 700px) {
+      .shell { width: min(100% - 28px, 1160px); }
+      .menu-button { display: block; }
+      nav { display: none; position: absolute; top: 71px; left: 0; right: 0; padding: 18px 20px 24px; background: var(--navy); flex-direction: column; align-items: stretch; }
+      nav.open { display: flex; }
+      nav a { padding: 8px 0; }
+      .nav-cta { text-align: center; }
+      .hero { padding: 70px 0 62px; }
+      .hero-grid { gap: 46px; }
+      .hero-meta { grid-template-columns: 1fr; gap: 17px; }
+      .intro-copy, .intro-label, .panel, .contact-card { padding: 28px; }
+      .section-block { padding-top: 70px; }
+      .section-heading, .experience-item { grid-template-columns: 1fr; gap: 14px; }
+      .role-grid, .skill-list, .compact-grid, .clean-list { grid-template-columns: 1fr; }
+      .contact-card { margin-top: 70px; }
+      .footer-row { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    @media print {
+      .site-header, .hero-actions { display: none; }
+      body { background: white; color: black; font-size: 11pt; }
+      .hero { color: black; background: white; padding: 20px 0; }
+      .hero-title, .meta-item small, .hero-meta, .section-lead, .experience-company, .school, .language span, footer { color: #333; }
+      .intro { margin-top: 0; }
+      .intro-card, .panel, .education-card, .role-card, .contact-card { box-shadow: none; border: 1px solid #aaa; background: white; color: black; }
+      .intro-label { background: white; color: black; }
+      .section-block, .contact-card { padding-top: 32px; }
+      .contact-card { margin-top: 32px; }
+      .contact-links a { color: black; border-color: #aaa; }
+      .role-card, .education-card, .experience-item { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top">Masoud <span>Ardeshiri</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" aria-label="Primary navigation">
+        <a href="#experience">Experience</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero" id="top">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow">Electrical engineering · Warsaw, Poland</p>
+        <h1>Masoud<br>Ardeshiri</h1>
+        <div class="accent-rule"></div>
+        <p class="hero-title">Ph.D. researcher and electrical engineer focused on power electronics, electric drives, renewable energy, and advanced energy-storage systems.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="Masoud-Ardeshiri-CV.pdf" download>Download CV</a>
+          <a class="button button-secondary" href="mailto:masoud.ardeshiri.dokt@pw.edu.pl">Email me</a>
+        </div>
+      </div>
+      <aside class="hero-meta" aria-label="Professional highlights">
+        <div class="meta-item"><small>Current focus</small><strong>Ph.D. in Electrical Engineering</strong></div>
+        <div class="meta-item"><small>Institution</small><strong>Warsaw University of Technology</strong></div>
+        <div class="meta-item"><small>Core domain</small><strong>Power Electronics &amp; Electric Drives</strong></div>
+      </aside>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="intro shell" aria-labelledby="profile-heading">
+      <div class="intro-card">
+        <div class="intro-label">
+          <span>Professional profile</span>
+          <strong id="profile-heading">Engineering reliable energy systems.</strong>
+        </div>
+        <div class="intro-copy">
+          <p>Results-driven electrical engineer with expertise in power systems, power electronics, energy storage, and electric drives. Currently pursuing a Ph.D. at Warsaw University of Technology, specializing in the integration of renewable energy systems, including PV and wind turbines, battery energy storage systems, and advanced energy management. Skilled in designing, modeling, and optimizing electrical systems for high efficiency and reliability, with strong problem-solving, teamwork, and adaptability in complex engineering environments.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block shell" aria-labelledby="roles-heading">
+      <div class="section-heading">
+        <p class="section-kicker">Career alignment</p>
+        <div>
+          <h2 id="roles-heading">Relevant engineering positions</h2>
+          <p class="section-lead">A profile suited to research, design, modeling, control, testing, and commissioning roles across electrical and renewable-energy systems.</p>
+        </div>
+      </div>
+      <div class="role-grid">
+        <article class="role-card"><span class="role-index">01</span><h3>Power Electronics Engineer</h3></article>
+        <article class="role-card"><span class="role-index">02</span><h3>Electrical Systems Engineer</h3></article>
+        <article class="role-card"><span class="role-index">03</span><h3>Renewable Energy Engineer</h3></article>
+        <article class="role-card"><span class="role-index">04</span><h3>R&amp;D / Control Engineer</h3></article>
+      </div>
+    </section>
+
+    <section class="section-block shell" id="experience" aria-labelledby="experience-heading">
+      <div class="section-heading">
+        <p class="section-kicker">Industry experience</p>
+        <div><h2 id="experience-heading">Hands-on electrical engineering</h2></div>
+      </div>
+      <div class="experience-list">
+        <article class="experience-item">
+          <div class="experience-when">2019–2020<span>Shiraz, Fars, Iran</span></div>
+          <div>
+            <h3>Junior Electrical Engineer</h3>
+            <p class="experience-company">Oil Refinery Company</p>
+            <ul>
+              <li>Designed and implemented internal cabling and wiring for boiler and water units.</li>
+              <li>Conducted maintenance and troubleshooting of internal electrical grids, ensuring uninterrupted operations.</li>
+              <li>Collaborated with engineering teams to optimize system reliability and safety.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-item">
+          <div class="experience-when">2013–2014<span>Shiraz, Fars, Iran</span></div>
+          <div>
+            <h3>Junior Electrical Engineer</h3>
+            <p class="experience-company">Petrochemical Company</p>
+            <ul>
+              <li>Assisted with wiring and cabling for main-complex electrical installations and control rooms.</li>
+              <li>Reviewed and interpreted electrical schematics for installation and commissioning activities.</li>
+              <li>Supported troubleshooting operations to minimize downtime and improve efficiency.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-item">
+          <div class="experience-when">2011–2012<span>Shiraz, Fars, Iran</span></div>
+          <div>
+            <h3>Electrical Engineer Intern</h3>
+            <p class="experience-company">Central Electricity Authority</p>
+            <ul>
+              <li>Operated and maintained high- and medium-voltage substations.</li>
+              <li>Analyzed power-consumption patterns to support performance optimization.</li>
+              <li>Participated in overhaul and maintenance projects, gaining hands-on experience with DIgSILENT simulation tools.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-item">
+          <div class="experience-when">2006–2007<span>Shiraz, Fars, Iran</span></div>
+          <div>
+            <h3>Electrical Engineer Intern</h3>
+            <p class="experience-company">Oil Refinery Company</p>
+            <ul>
+              <li>Assisted in the installation, commissioning, and maintenance of internal electrical networks.</li>
+              <li>Developed familiarity with gas-turbine-unit control-board wiring and functionality.</li>
+              <li>Maintained and updated operational records and technical documentation.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block shell" id="expertise" aria-labelledby="expertise-heading">
+      <div class="section-heading">
+        <p class="section-kicker">Capabilities</p>
+        <div>
+          <h2 id="expertise-heading">Technical expertise</h2>
+          <p class="section-lead">Control, analysis, simulation, implementation, monitoring, and troubleshooting across modern electrical-energy systems.</p>
+        </div>
+      </div>
+      <div class="expertise-layout">
+        <article class="panel">
+          <h3>Engineering competencies</h3>
+          <div class="skill-list">
+            <div class="skill">Power converter control and analysis: AC-DC, DC-AC, DC-DC, buck, boost, and buck-boost</div>
+            <div class="skill">Renewable-energy systems</div>
+            <div class="skill">Photovoltaic-system analysis</div>
+            <div class="skill">Battery-storage systems: control and analysis</div>
+            <div class="skill">Energy management, monitoring, control, analysis, and troubleshooting</div>
+            <div class="skill">Electric drives and synchronous/asynchronous generator systems</div>
+            <div class="skill">AC/DC electrical systems, network cabling, wiring, simulation, and implementation</div>
+            <div class="skill">Testing, commissioning, and computer modeling</div>
+            <div class="skill">Electrical-system design, analysis, monitoring, and troubleshooting</div>
+            <div class="skill">Power-systems analysis and power quality</div>
+            <div class="skill">Wind-turbine modeling and analysis for off-grid and grid-connected systems</div>
+          </div>
+        </article>
+        <div class="stack">
+          <article class="panel panel-dark">
+            <h3>Software</h3>
+            <div class="software-cloud" aria-label="Software skills">
+              <span>MATLAB/Simulink</span><span>PSIM</span><span>PLECS</span><span>PSpice</span><span>Electronic Workbench</span><span>Arduino</span><span>DIgSILENT</span><span>LaTeX</span><span>Microsoft Office / Excel</span><span>Microsoft Visio</span>
+            </div>
+          </article>
+          <article class="panel">
+            <h3>Languages</h3>
+            <div class="language"><div><strong>English</strong><span>Full professional proficiency</span></div><div class="language-level">Professional</div></div>
+            <div class="language"><div><strong>Persian</strong><span>Native / bilingual</span></div><div class="language-level">Native</div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block shell" id="education" aria-labelledby="education-heading">
+      <div class="section-heading">
+        <p class="section-kicker">Academic background</p>
+        <div><h2 id="education-heading">Education &amp; research</h2></div>
+      </div>
+      <div class="education-grid">
+        <article class="education-card featured">
+          <span class="degree-tag">Doctorate</span>
+          <h3>Ph.D. Electrical Engineering</h3>
+          <p class="school">Warsaw University of Technology</p>
+          <p class="years">2021–2026</p>
+          <ul>
+            <li><strong>Research:</strong> renewable energy (wind turbines and PV systems), energy management, power-electronic converter control, and electric drives.</li>
+            <li><strong>Thesis:</strong> Analysis of Power Generation Systems Supported by Hybrid Battery-Supercapacitor Energy Storage Systems.</li>
+          </ul>
+        </article>
+        <article class="education-card">
+          <span class="degree-tag">Master's degree</span>
+          <h3>M.Sc. Electrical Engineering</h3>
+          <p class="school">Azad University of Kazeroon Branch, Iran</p>
+          <p class="years">2015–2017</p>
+          <ul>
+            <li><strong>Research:</strong> renewable energy, power electronics, control, and electric drives.</li>
+            <li><strong>Thesis:</strong> Active and Reactive Power Control in Wind Turbines Based on DFIG Using a Type-2 Fuzzy Logic Controller Tuned by a PSO Algorithm.</li>
+          </ul>
+        </article>
+        <article class="education-card">
+          <span class="degree-tag">Bachelor's degree</span>
+          <h3>B.Sc. Electrical Engineering</h3>
+          <p class="school">Azad University of Shiraz Branch, Iran</p>
+          <p class="years">2011–2013</p>
+          <ul>
+            <li><strong>Research:</strong> power systems and power-system analysis.</li>
+            <li><strong>Thesis:</strong> Troubleshooting Power Transformers Using Dissolved Gas Analysis.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block shell" aria-labelledby="strengths-heading">
+      <div class="section-heading">
+        <p class="section-kicker">Professional strengths</p>
+        <div><h2 id="strengths-heading">How I work</h2></div>
+      </div>
+      <div class="compact-grid">
+        <article class="panel">
+          <h3>General skills</h3>
+          <ul class="clean-list">
+            <li>Problem solving</li>
+            <li>Research and development</li>
+            <li>Technical presentations</li>
+            <li>Project reporting</li>
+            <li>Project management and scheduling</li>
+            <li>Teamwork and a goal-oriented mindset</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h3>Interests</h3>
+          <ul class="clean-list">
+            <li>Modern AI technologies</li>
+            <li>Aviation and aerospace</li>
+            <li>Learning new languages</li>
+            <li>Geography</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-card shell" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-layout">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-heading">Let’s discuss an engineering opportunity.</h2>
+          <p>Based in Warsaw, Poland, with a background spanning industrial electrical systems, doctoral research, and advanced energy technologies.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:masoud.ardeshiri.dokt@pw.edu.pl">masoud.ardeshiri.dokt@pw.edu.pl</a>
+          <a href="tel:+48793452951">+48 793 452 951</a>
+          <a href="https://www.linkedin.com/in/masoud-ardeshiri-376504171/" target="_blank" rel="noreferrer">LinkedIn profile</a>
+          <a href="https://github.com/MaArdeshri" target="_blank" rel="noreferrer">GitHub profile</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-row">
+      <span>© <span id="year">2026</span> Masoud Ardeshiri</span>
+      <span>Electrical Engineering · Power Electronics · Electric Drives</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const nav = document.querySelector('#main-nav');
+    menuButton.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+    nav.addEventListener('click', (event) => {
+      if (event.target.matches('a')) {
+        nav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
