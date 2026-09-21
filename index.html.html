@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Masoud Ardeshiri — Electrical Engineer and Ph.D. researcher">
+<title>Masoud Ardeshiri | Electrical Engineer</title>
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;background:#9ed7ea}
+  body{margin:0;background:#9ed7ea}
+  #fixed-dfig-v13{position:relative;min-height:100vh;overflow:hidden;color:#102f49;background:linear-gradient(rgba(18,84,116,.085) 1px,transparent 1px),linear-gradient(90deg,rgba(18,84,116,.085) 1px,transparent 1px),radial-gradient(circle at 76% 36%,rgba(255,255,255,.42),transparent 34%),linear-gradient(125deg,#dff6fb 0%,#b9e4f0 52%,#8fcce2 100%);background-size:46px 46px,46px 46px,auto,auto;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+  #fixed-dfig-v13:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(225,247,252,.98) 0%,rgba(211,240,248,.88) 38%,rgba(186,228,239,.18) 70%,transparent)}
+  #fixed-dfig-v13 .fd-nav{position:relative;z-index:6;min-height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;border-bottom:1px solid rgba(255,255,255,.12);background:rgba(218,244,250,.72)}
+  #fixed-dfig-v13 .fd-brand{font-weight:500} #fixed-dfig-v13 .fd-brand span{color:#08798a}
+  #fixed-dfig-v13 .fd-links{display:flex;gap:29px;color:#183c58;font-size:13px;font-weight:500}
+  #fixed-dfig-v13 .fd-copy{position:relative;z-index:5;width:min(520px,43%);padding:82px 0 88px 6.5%}
+  #fixed-dfig-v13 .fd-kicker{margin:0 0 22px;color:#08798a;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+  #fixed-dfig-v13 h2{margin:0;color:#102f49;font-size:clamp(52px,7vw,84px);font-weight:500;line-height:.91;letter-spacing:-.055em}
+  #fixed-dfig-v13 .fd-rule{width:76px;height:3px;margin:29px 0;background:#0b8794}
+  #fixed-dfig-v13 .fd-role{max-width:500px;margin:0;color:#294f69;font-size:17px;line-height:1.58}
+  #fixed-dfig-v13 .fd-actions{display:flex;gap:12px;margin-top:31px}
+  #fixed-dfig-v13 .fd-action{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid rgba(15,59,83,.34);border-radius:9px;color:#102f49;background:rgba(255,255,255,.34);font-size:13px;font-weight:500;text-decoration:none}
+  #fixed-dfig-v13 .fd-action.primary{color:#ffffff;border-color:#08798a;background:#08798a}
+  #fixed-dfig-v13 .fd-scene{position:absolute;inset:72px 0 0;z-index:1;width:100%;height:calc(100% - 72px)}
+  #fixed-dfig-v13 .fd-rotor{transform-origin:810px 205px;transform-box:view-box;animation:fd-spin 10s linear infinite}
+  #fixed-dfig-v13 .fd-genrotor{transform-origin:938px 205px;transform-box:view-box;animation:fd-reverse 4s linear infinite}
+  #fixed-dfig-v13 .fd-wind{stroke-dasharray:42 135;animation:fd-wind 3.7s linear infinite}
+  #fixed-dfig-v13 .fd-wind.b{animation-delay:-1.6s;animation-duration:4.2s}
+  #fixed-dfig-v13 .fd-flow{stroke-dasharray:5 13;animation:fd-flow 1.6s linear infinite}
+  #fixed-dfig-v13 .fd-flow.phase-b{animation-delay:-.52s}
+  #fixed-dfig-v13 .fd-flow.phase-c{animation-delay:-1.04s}
+  @keyframes fd-spin{to{transform:rotate(360deg)}} @keyframes fd-reverse{to{transform:rotate(-360deg)}} @keyframes fd-wind{to{stroke-dashoffset:-177}} @keyframes fd-flow{to{stroke-dashoffset:-36}}
+  @media(max-width:780px){#fixed-dfig-v13{min-height:940px}#fixed-dfig-v13 .fd-links{display:none}#fixed-dfig-v13 .fd-copy{width:auto;padding:54px 24px 510px}#fixed-dfig-v13 .fd-scene{inset:auto 0 0;height:520px}}
+  @media(prefers-reduced-motion:reduce){#fixed-dfig-v13 .fd-rotor,#fixed-dfig-v13 .fd-genrotor,#fixed-dfig-v13 .fd-wind,#fixed-dfig-v13 .fd-flow{animation:none}}
+  /* Final visual treatment: solid blue field, black technical structure, stronger animated energy paths. */
+  #fixed-dfig-v13{background:#9ed7ea;background-image:none}
+  #fixed-dfig-v13::after{background:none}
+  #fixed-dfig-v13 .fd-nav{background:#9ed7ea;border-bottom-color:rgba(7,27,37,.22)}
+  #fixed-dfig-v13 .fd-scene text{fill:#071b25}
+  #fixed-dfig-v13 .fd-scene g[stroke]:not([stroke="none"]){stroke:#071b25}
+  #fixed-dfig-v13 .fd-scene path[stroke]:not([stroke="none"]):not(.fd-flow),
+  #fixed-dfig-v13 .fd-scene rect[stroke]:not([stroke="none"]),
+  #fixed-dfig-v13 .fd-scene circle[stroke]:not([stroke="none"]),
+  #fixed-dfig-v13 .fd-scene line[stroke]:not([stroke="none"]){stroke:#071b25}
+  #fixed-dfig-v13 .fd-scene .fd-flow{stroke:#007f8f!important;stroke-width:3.2!important;stroke-dasharray:1 11!important;stroke-linecap:round}
+  #fixed-dfig-v13 .fd-scene #fd-switch path{stroke:#010609!important;stroke-width:2.2!important}
+  #fixed-dfig-v13 .fd-scene .battery-mark{stroke:#ffffff!important}
+  #fixed-dfig-v13 .fd-scene .fd-wind{stroke:#071b25!important;stroke-width:2!important;opacity:.35}
+</style>
+</head>
+<body>
+
+<section id="fixed-dfig-v13" aria-label="Portfolio hero with mechanically connected wind turbine and detailed converters">
+  <header class="fd-nav"><div class="fd-brand">Masoud <span>Ardeshiri</span></div><nav class="fd-links" aria-label="Portfolio sections"><span>Experience</span><span>Expertise</span><span>Education</span><span>Contact</span></nav></header>
+
+  <svg class="fd-scene" viewBox="0 0 1440 608" role="img" aria-labelledby="fd-title fd-desc">
+    <title id="fd-title">Wind rotor rigidly connected to a DFIG shaft and detailed power converters</title>
+    <desc id="fd-desc">The blade roots, hub, bearing and shaft share one exact center. The wind turbine, tower and DFIG are positioned left of the converters. The animated power-flow dots are smaller. The ESS half-bridge is enclosed in a rectangular converter frame matching the RSC and LSC. The battery uses the supplied visual style with a grey cap, orange body, plus sign, lightning symbol and minus sign.</desc>
+    <defs>
+      <linearGradient id="fd-air" x1="0" x2="1"><stop stop-color="#197c9a" stop-opacity="0"/><stop offset="1" stop-color="#197c9a"/></linearGradient>
+      <linearGradient id="fd-energy" x1="0" x2="1"><stop stop-color="#0796a2"/><stop offset="1" stop-color="#256caa"/></linearGradient>
+      <filter id="fd-glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <g id="fd-switch" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 0v7M10 21v7M5 8v12M10 7L6 11M6 17l4 4M0 14h5" stroke="#010609" stroke-width="2.2"/>
+        <path d="M17 6v16M13 10l4-4 4 4zM13 18h8M10 4h7v2M10 24h7v-2" stroke="#010609" stroke-width="2.2"/>
+      </g>
+    </defs>
+
+    <!-- Animated wind approaches the blade plane from the left. -->
+    <g fill="none" stroke="url(#fd-air)" stroke-width="2" stroke-linecap="round" opacity=".58">
+      <path class="fd-wind" d="M300 78C370 67 448 73 525 91"/>
+      <path class="fd-wind b" d="M275 139C360 122 447 132 538 152"/>
+      <path class="fd-wind" d="M282 205C365 190 452 196 542 209"/>
+      <path class="fd-wind b" d="M305 278C377 258 452 263 527 280"/>
+    </g>
+
+    <!-- The complete technical structure is shifted toward the center and upward. -->
+    <g transform="translate(-105 -22)">
+    <!-- Turbine, tower and DFIG are moved left of the converter chain. -->
+    <g transform="translate(-145 0)">
+    <!-- One rigid mechanical axis: hub center = bearing center = shaft center = generator-rotor center. -->
+    <g stroke-linecap="round" stroke-linejoin="round">
+      <!-- Fixed tower and nacelle -->
+      <path d="M882 233L857 531H912Z" fill="rgba(255,255,255,.30)" stroke="#78acb5" stroke-width="4"/>
+      <path d="M796 175H982C999 175 1010 188 1010 205s-11 30-28 30H796Z" fill="rgba(255,255,255,.38)" stroke="#79aab5" stroke-width="3"/>
+
+      <!-- Fixed outer bearing and the shaft visibly entering the generator -->
+      <circle cx="810" cy="205" r="30" fill="#092b40" stroke="#72a4b1" stroke-width="4"/>
+      <path d="M810 205H938" fill="none" stroke="#c0eee6" stroke-width="8"/>
+      <path d="M810 205H938" fill="none" stroke="#244d61" stroke-width="3"/>
+      <circle cx="857" cy="205" r="12" fill="#0b3047" stroke="#87c6c4" stroke-width="3"/>
+      
+
+      <!-- All three blade roots and both hub circles are inside this one rotating group. -->
+      <g class="fd-rotor">
+        <g fill="rgba(112,224,207,.18)" stroke="#147d89" stroke-width="3">
+          <path d="M810 190C819 144 827 88 813 44C801 31 789 49 790 65C792 114 798 156 810 190Z"/>
+          <path d="M810 190C819 144 827 88 813 44C801 31 789 49 790 65C792 114 798 156 810 190Z" transform="rotate(120 810 205)"/>
+          <path d="M810 190C819 144 827 88 813 44C801 31 789 49 790 65C792 114 798 156 810 190Z" transform="rotate(240 810 205)"/>
+        </g>
+        <circle cx="810" cy="205" r="23" fill="#0a2d43" stroke="#08798a" stroke-width="4"/>
+        <circle cx="810" cy="205" r="10" fill="#08798a"/>
+        <circle cx="810" cy="205" r="4" fill="#123b52"/>
+        <g fill="#08798a"><circle cx="810" cy="188" r="2.5"/><circle cx="795" cy="214" r="2.5"/><circle cx="825" cy="214" r="2.5"/></g>
+      </g>
+
+      <!-- Fixed DFIG stator and rotating internal circle on the same horizontal shaft axis -->
+      <circle cx="938" cy="205" r="38" fill="rgba(120,234,215,.08)" stroke="#679aa8" stroke-width="3"/>
+      <circle cx="938" cy="205" r="29" fill="#092c42" stroke="#8ac6c6" stroke-width="3"/>
+      <g class="fd-genrotor" fill="none" stroke="#08798a" stroke-width="2.5">
+        <circle cx="938" cy="205" r="18"/><path d="M938 187v10M938 213v10M920 205h10M946 205h10"/><circle cx="938" cy="205" r="6" fill="#08798a" stroke="none"/>
+      </g>
+      
+    </g>
+    </g>
+
+    <!-- DFIG stator is connected directly to the three-phase PCC / load bus. -->
+    <g fill="none" stroke="#315f78" stroke-width="1.8">
+      <path d="M831 190H1320"/>
+      <path d="M831 205H1320"/>
+      <path d="M831 220H1320"/>
+    </g>
+    <g fill="none" stroke="url(#fd-energy)" stroke-width="2.6" filter="url(#fd-glow)">
+      <path class="fd-flow" d="M831 190H1320"/>
+      <path class="fd-flow phase-b" d="M831 205H1320"/>
+      <path class="fd-flow phase-c" d="M831 220H1320"/>
+    </g>
+    
+    <g transform="translate(1320 165)">
+      <rect width="105" height="80" rx="8" fill="rgba(255,255,255,.42)" stroke="#071b25" stroke-width="2"/>
+      <!-- Grid tower and AC-load waveform icon; no phase lines continue inside the frame. -->
+      <g fill="none" stroke="#071b25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M31 12L19 53H43Z M24 34H38 M22 43H40 M31 12V53 M24 24H38"/>
+        <path d="M53 35h7c3-10 6 10 9 0s6 10 9 0 6 10 9 0"/>
+      </g>
+      
+    </g>
+
+    <!-- Three-phase pickup is taken from the rotating DFIG rotor, drops vertically, then turns 90 degrees into the RSC. -->
+    <g fill="none" stroke="#315f78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M785 223V392H864"/>
+      <path d="M793 223V406H864"/>
+      <path d="M801 223V420H864"/>
+    </g>
+    <g fill="none" stroke="url(#fd-energy)" stroke-width="2.6" filter="url(#fd-glow)">
+      <path class="fd-flow" d="M785 223V392H864"/>
+      <path class="fd-flow phase-b" d="M793 223V406H864"/>
+      <path class="fd-flow phase-c" d="M801 223V420H864"/>
+    </g>
+    <!-- Slip-ring pickup points on the rotating rotor and phase terminals at the RSC. -->
+    <g fill="#08798a" stroke="#071b25" stroke-width="1.2">
+      <circle cx="785" cy="223" r="4"/><circle cx="793" cy="223" r="4"/><circle cx="801" cy="223" r="4"/>
+      <circle cx="864" cy="392" r="3.2"/><circle cx="864" cy="406" r="3.2"/><circle cx="864" cy="420" r="3.2"/>
+    </g>
+    
+    
+
+    <!-- RSC, common DC link and LSC: each bridge shows six IGBT/diode switch cells. -->
+    <g transform="translate(784 350)" font-family="Inter, sans-serif">
+      
+      <g transform="translate(80 0)">
+        <rect width="150" height="126" rx="8" fill="rgba(255,255,255,.48)" stroke="#6f9daa" stroke-width="2"/>
+        
+        <path d="M18 16H132M18 110H132" fill="none" stroke="#81b7bf" stroke-width="2"/>
+        <g transform="translate(29 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g><g transform="translate(69 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g><g transform="translate(109 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g>
+        <g fill="none" stroke="#071b25" stroke-width="1.7"><path d="M39 16v2M39 46v20M39 94v16M79 16v2M79 46v20M79 94v16M119 16v2M119 46v20M119 94v16"/></g>
+        <g fill="#08798a" font-size="8"></g>
+        <g fill="#748fa2" font-size="6"></g>
+      </g>
+
+      <path d="M230 16H324M230 110H324" fill="none" stroke="#83b3be" stroke-width="2"/><path class="fd-flow" d="M230 16H324M324 110H230" fill="none" stroke="#86eadb" stroke-width="2.7"/>
+      <path d="M267 16V59M255 59h24M255 67h24M267 67V110" fill="none" stroke="#08798a" stroke-width="2.4"/>
+
+      <g transform="translate(324 0)">
+        <rect width="150" height="126" rx="8" fill="rgba(255,255,255,.48)" stroke="#6f9daa" stroke-width="2"/>
+        
+        <path d="M18 16H132M18 110H132" fill="none" stroke="#81b7bf" stroke-width="2"/>
+        <g transform="translate(29 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g><g transform="translate(69 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g><g transform="translate(109 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g>
+        <g fill="none" stroke="#071b25" stroke-width="1.7"><path d="M39 16v2M39 46v20M39 94v16M79 16v2M79 46v20M79 94v16M119 16v2M119 46v20M119 94v16"/></g>
+        <g fill="#08798a" font-size="8"></g>
+        <g fill="#748fa2" font-size="6"></g>
+      </g>
+
+      <!-- LSC three-phase output rises and joins the same PCC bus as the DFIG stator. -->
+      <g fill="none" stroke="#315f78" stroke-width="1.8">
+        <path d="M474 42H500V-160"/>
+        <path d="M474 56H512V-145"/>
+        <path d="M474 70H524V-130"/>
+      </g>
+      <g fill="none" stroke="url(#fd-energy)" stroke-width="2.6" filter="url(#fd-glow)">
+        <path class="fd-flow" d="M474 42H500V-160"/>
+        <path class="fd-flow phase-b" d="M474 56H512V-145"/>
+        <path class="fd-flow phase-c" d="M474 70H524V-130"/>
+      </g>
+      <g fill="#08798a"><circle cx="500" cy="-160" r="3.2"/><circle cx="512" cy="-145" r="3.2"/><circle cx="524" cy="-130" r="3.2"/></g>
+      
+
+      <!-- ESS converter is framed like the RSC and LSC; external L, C and battery remain visible. -->
+      <g stroke-linecap="round" stroke-linejoin="round">
+        <!-- Converter enclosure -->
+        <rect x="175" y="136" width="100" height="106" rx="8" fill="rgba(255,255,255,.48)" stroke="#071b25" stroke-width="2"/>
+        
+
+        <!-- Positive and negative DC-bus terminals enter the converter frame -->
+        <path d="M255 16V136H220M279 110V242H220" fill="none" stroke="#071b25" stroke-width="2"/>
+        
+        
+
+        <!-- S1/D1 and S2/D2 inside the framed half-bridge -->
+        <g transform="translate(210 145)"><use href="#fd-switch"/></g>
+        <g transform="translate(210 193)"><use href="#fd-switch"/></g>
+        <path d="M220 136V145M220 173V185M220 185V193M220 221V242M220 185H275" fill="none" stroke="#071b25" stroke-width="2"/>
+        <circle cx="220" cy="185" r="3.2" fill="#071b25" stroke="none"/>
+        
+        
+        
+        
+
+        <!-- External ESS inductor -->
+        <path d="M275 185q6-12 12 0t12 0t12 0t12 0H340" fill="none" stroke="#071b25" stroke-width="2.2"/>
+        
+
+        <!-- External ESS capacitor -->
+        <path d="M340 185H420M220 242H420M355 185V200M344 200H366M344 207H366M355 207V242" fill="none" stroke="#071b25" stroke-width="2"/>
+        
+
+        <!-- Battery icon matching the supplied reference: grey cap, orange body, plus, lightning and minus. -->
+        <g transform="translate(395 172)">
+          <rect x="5" y="0" width="9" height="5" rx="1" fill="#697177" stroke="#071b25" stroke-width="1"/>
+          <rect x="36" y="0" width="9" height="5" rx="1" fill="#697177" stroke="#071b25" stroke-width="1"/>
+          <rect x="0" y="5" width="50" height="56" rx="3" fill="#f28c28" stroke="#071b25" stroke-width="2"/>
+          <path d="M0 18H50" stroke="#4f565b" stroke-width="13"/>
+          <path class="battery-mark" d="M8 39h10M13 34v10M35 39h9" stroke="#ffffff" stroke-width="2.5"/>
+          <path d="M28 28l-6 11h6l-4 11 11-14h-6l4-8z" fill="#ffffff" stroke="none"/>
+        </g>
+        <path d="M420 172V185M420 233V242" fill="none" stroke="#071b25" stroke-width="2"/>
+        
+
+        <!-- Animated transfer path ends at the converter boundary and resumes on the external ESS branch -->
+        <path class="fd-flow" d="M255 16V136H220V185H420V172" fill="none" stroke="#007f8f" stroke-width="3.2"/>
+      </g>
+    </g>
+
+    <g fill="#315f78" font-size="9" letter-spacing="1.35" opacity=".72"></g>
+    </g>
+  </svg>
+
+  <div class="fd-copy"><p class="fd-kicker">Electrical engineering · Warsaw, Poland</p><h2>Masoud<br>Ardeshiri</h2><div class="fd-rule"></div><p class="fd-role">Ph.D. researcher and electrical engineer focused on power electronics, electric drives, renewable energy, and advanced energy-storage systems.</p><div class="fd-actions"><a class="fd-action primary" href="./Masoud-Ardeshiri-CV.pdf.pdf" download>Download CV</a><a class="fd-action" href="mailto:masoud.ardeshiri.dokt@pw.edu.pl">Email me</a></div></div>
+</section>
+
+<!-- Add your Experience, Expertise and Education sections below this line. -->
+</body>
+</html>
+
+
+
+
+
+
+
