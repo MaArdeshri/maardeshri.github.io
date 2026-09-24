@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Masoud Ardeshiri — Electrical Engineer and Ph.D. researcher">
+<title>Masoud Ardeshiri | Electrical Engineer</title>
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;background:#d7dadd}
+  body{margin:0;background:#d7dadd}
+  #fixed-dfig-v13{position:relative;min-height:100vh;overflow:hidden;color:#102f49;background:linear-gradient(rgba(18,84,116,.085) 1px,transparent 1px),linear-gradient(90deg,rgba(18,84,116,.085) 1px,transparent 1px),radial-gradient(circle at 76% 36%,rgba(255,255,255,.42),transparent 34%),linear-gradient(125deg,#dff6fb 0%,#b9e4f0 52%,#8fcce2 100%);background-size:46px 46px,46px 46px,auto,auto;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+  #fixed-dfig-v13:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(225,247,252,.98) 0%,rgba(211,240,248,.88) 38%,rgba(186,228,239,.18) 70%,transparent)}
+  #fixed-dfig-v13 .fd-nav{position:relative;z-index:6;min-height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;border-bottom:1px solid rgba(255,255,255,.12);background:rgba(218,244,250,.72)}
+  #fixed-dfig-v13 .fd-brand{font-weight:500} #fixed-dfig-v13 .fd-brand span{color:#08798a}
+  #fixed-dfig-v13 .fd-links{display:flex;gap:24px;color:#183c58;font-size:13px;font-weight:500}
+  #fixed-dfig-v13 .fd-copy{position:relative;z-index:5;width:min(520px,43%);padding:82px 0 88px 6.5%}
+  #fixed-dfig-v13 .fd-kicker{margin:0 0 22px;color:#08798a;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+  #fixed-dfig-v13 h2{margin:0;color:#102f49;font-size:clamp(52px,7vw,84px);font-weight:500;line-height:.91;letter-spacing:-.055em}
+  #fixed-dfig-v13 .fd-rule{width:76px;height:3px;margin:29px 0;background:#0b8794}
+  #fixed-dfig-v13 .fd-role{max-width:500px;margin:0;color:#294f69;font-size:17px;line-height:1.58}
+  #fixed-dfig-v13 .fd-actions{display:flex;gap:12px;margin-top:31px}
+  #fixed-dfig-v13 .fd-action{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid rgba(15,59,83,.34);border-radius:9px;color:#102f49;background:rgba(255,255,255,.34);font-size:13px;font-weight:500;text-decoration:none}
+  #fixed-dfig-v13 .fd-action.primary{color:#ffffff;border-color:#08798a;background:#08798a}
+  #fixed-dfig-v13 .fd-scene{position:absolute;inset:72px 0 0;z-index:1;width:100%;height:calc(100% - 72px)}
+  #fixed-dfig-v13 .fd-rotor{transform-origin:650px 205px;transform-box:view-box;animation:fd-spin 8s linear infinite}
+  #fixed-dfig-v13 .fd-genrotor{transform-origin:938px 205px;transform-box:view-box;animation:fd-reverse 3.5s linear infinite}
+  #fixed-dfig-v13 .fd-wind{stroke-dasharray:42 135;animation:fd-wind 3.7s linear infinite}
+  #fixed-dfig-v13 .fd-wind.b{animation-delay:-1.6s;animation-duration:4.2s}
+  #fixed-dfig-v13 .fd-flow{stroke-dasharray:5 13;animation:fd-flow 1.6s linear infinite}
+  #fixed-dfig-v13 .fd-flow.phase-b{animation-delay:-.52s}
+  #fixed-dfig-v13 .fd-flow.phase-c{animation-delay:-1.04s}
+  @keyframes fd-spin{to{transform:rotate(360deg)}} @keyframes fd-reverse{to{transform:rotate(-360deg)}} @keyframes fd-wind{to{stroke-dashoffset:-177}} @keyframes fd-flow{to{stroke-dashoffset:-36}}
+  @media(max-width:780px){#fixed-dfig-v13{min-height:940px}#fixed-dfig-v13 .fd-links{display:none}#fixed-dfig-v13 .fd-copy{width:auto;padding:54px 24px 510px}#fixed-dfig-v13 .fd-scene{inset:auto 0 0;height:520px}}
+  @media(prefers-reduced-motion:reduce){#fixed-dfig-v13,#fixed-dfig-v13 .fd-rotor,#fixed-dfig-v13 .fd-genrotor,#fixed-dfig-v13 .fd-wind,#fixed-dfig-v13 .fd-flow{animation:none}}
+
+  /* Professional DFIG background image with a readability overlay. */
+  #fixed-dfig-v13{
+    background-color:#d7dadd;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(235,239,241,.86) 0%,
+        rgba(235,239,241,.68) 34%,
+        rgba(215,218,221,.25) 68%,
+        rgba(215,218,221,.12) 100%
+      ),
+      url("./website-background-final.png");
+    background-size:100% 100%,cover;
+    background-position:center,center;
+    background-repeat:no-repeat,no-repeat;
+    background-attachment:fixed,fixed;
+    animation:none;
+  }
+  #fixed-dfig-v13::after{background:none}
+  @media(max-width:780px){
+    #fixed-dfig-v13{
+      background-size:100% 100%,auto 100%;
+      background-position:center,58% center;
+      background-attachment:scroll,scroll;
+    }
+  }
+  #fixed-dfig-v13 .fd-nav{background:rgba(229,234,236,.84);border-bottom-color:rgba(7,27,37,.22);backdrop-filter:blur(10px)}
+  #fixed-dfig-v13 .fd-scene text{fill:#071b25}
+  #fixed-dfig-v13 .fd-scene g[stroke]:not([stroke="none"]){stroke:#071b25}
+  #fixed-dfig-v13 .fd-scene path[stroke]:not([stroke="none"]):not(.fd-flow),
+  #fixed-dfig-v13 .fd-scene rect[stroke]:not([stroke="none"]),
+  #fixed-dfig-v13 .fd-scene circle[stroke]:not([stroke="none"]),
+  #fixed-dfig-v13 .fd-scene line[stroke]:not([stroke="none"]){stroke:#071b25}
+  #fixed-dfig-v13 .fd-scene .fd-flow{stroke:#007f8f!important;stroke-width:3.2!important;stroke-dasharray:1 11!important;stroke-linecap:round}
+  #fixed-dfig-v13 .fd-scene #fd-switch path{stroke:#010609!important;stroke-width:2.2!important}
+  #fixed-dfig-v13 .fd-scene .battery-mark{stroke:#ffffff!important}
+  #fixed-dfig-v13 .fd-scene .fd-wind{stroke:#071b25!important;stroke-width:2!important;opacity:.35}
+  #fixed-dfig-v13 .fd-scene .fd-genrotor{stroke:#f28c28!important}
+  #fixed-dfig-v13 .fd-scene .fd-rotation-mark{fill:#f28c28!important;stroke:none!important}
+
+
+  /* ===== Updated portfolio header / profile layout ===== */
+  #fixed-dfig-v13 .fd-nav{
+    min-height:150px;
+    padding:0 6%;
+    align-items:flex-start;
+    position:relative;
+    background:rgba(229,234,236,.84);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(7,27,37,.22);
+  }
+  #fixed-dfig-v13 .energy-brand{
+    position:absolute;left:6%;top:6px;display:flex;align-items:center;z-index:10;
+    width:min(560px,48vw);aspect-ratio:2110/524;
+  }
+  #fixed-dfig-v13 .energy-brand-mark{
+    width:23%;height:100%;flex:0 0 23%;overflow:hidden;
+  }
+  #fixed-dfig-v13 .energy-brand-logo{
+    display:block;width:auto;height:100%;max-width:none;
+  }
+  #fixed-dfig-v13 .energy-brand-text{
+    flex:1;white-space:nowrap;color:#071b25;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(26px,3.15vw,48px);font-weight:700;line-height:1;
+    letter-spacing:-.035em;
+  }
+  #fixed-dfig-v13 .fd-links{
+    position:absolute;right:6%;top:24px;display:flex;gap:24px;color:#183c58;
+    font-size:13px;font-weight:500;
+  }
+  #fixed-dfig-v13 .header-actions{
+    position:absolute;right:6%;top:76px;display:flex;gap:16px;z-index:10;
+  }
+  #fixed-dfig-v13 .header-actions .fd-action{min-height:44px;padding:0 22px}
+  #fixed-dfig-v13 .profile-photo{
+    position:absolute;z-index:5;left:6%;top:175px;width:150px;height:150px;
+    object-fit:cover;object-position:center top;border-radius:50%;
+    border:4px solid rgba(255,255,255,.85);box-shadow:0 8px 25px rgba(16,47,73,.18);
+  }
+  #fixed-dfig-v13 .fd-copy{
+    position:relative;z-index:5;width:min(520px,43%);padding:335px 0 70px 6%;
+  }
+  #fixed-dfig-v13 .fd-kicker{display:none}
+  #fixed-dfig-v13 h2{font-size:clamp(48px,5vw,68px);line-height:.95;letter-spacing:-.045em}
+  #fixed-dfig-v13 .fd-copy .fd-actions{display:none}
+  #fixed-dfig-v13 .fd-scene{inset:150px 0 0;height:calc(100% - 150px)}
+  @media(max-width:900px){
+    #fixed-dfig-v13 .energy-brand{width:min(470px,60vw)}
+    #fixed-dfig-v13 .energy-brand-text{font-size:clamp(25px,4.9vw,42px)}
+    #fixed-dfig-v13 .fd-links{display:none}
+    #fixed-dfig-v13 .header-actions{right:24px;top:92px}
+  }
+  @media(max-width:780px){
+    #fixed-dfig-v13{min-height:1050px}
+    #fixed-dfig-v13 .fd-nav{min-height:190px;padding:0 24px}
+    #fixed-dfig-v13 .energy-brand{left:24px;top:18px}
+    #fixed-dfig-v13 .energy-brand{width:min(500px,calc(100vw - 48px))}
+    #fixed-dfig-v13 .energy-brand-text{font-size:clamp(19px,5.4vw,25px)}
+    #fixed-dfig-v13 .header-actions{left:24px;right:auto;top:112px}
+    #fixed-dfig-v13 .header-actions .fd-action{padding:0 14px}
+    #fixed-dfig-v13 .profile-photo{left:24px;top:215px;width:130px;height:130px}
+    #fixed-dfig-v13 .fd-copy{width:auto;padding:375px 24px 510px}
+    #fixed-dfig-v13 .fd-scene{inset:auto 0 0;height:520px}
+  }
+
+  /* Centered portrait-and-name card matching the requested reference layout. */
+  #fixed-dfig-v13 .fd-copy{
+    width:620px;
+    margin-left:0;
+    padding:58px 0 74px;
+    text-align:center;
+  }
+  #fixed-dfig-v13 .profile-photo{
+    position:relative;
+    left:auto;
+    top:auto;
+    display:block;
+    width:180px;
+    height:190px;
+    margin:0 auto 12px;
+    object-fit:cover;
+    object-position:center top;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+  }
+  #fixed-dfig-v13 h2{
+    white-space:nowrap;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(22px,2vw,27px);
+    font-weight:700;
+    line-height:1.08;
+    letter-spacing:-.025em;
+  }
+  #fixed-dfig-v13 .profile-subtitle{
+    margin:7px 0 17px;
+    color:#102f49;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(22px,2vw,27px);
+    font-weight:700;
+    line-height:1.12;
+    white-space:nowrap;
+  }
+  @media(max-width:900px){
+    #fixed-dfig-v13 .fd-copy{width:590px;margin-left:0}
+    #fixed-dfig-v13 .profile-photo{width:165px;height:175px}
+    #fixed-dfig-v13 h2{font-size:23px}
+    #fixed-dfig-v13 .profile-subtitle{font-size:23px;white-space:nowrap}
+  }
+  @media(max-width:780px){
+    #fixed-dfig-v13 .fd-copy{width:auto;margin-left:0;padding:42px 24px 510px}
+    #fixed-dfig-v13 .profile-photo{width:170px;height:180px}
+    #fixed-dfig-v13 h2{font-size:24px;white-space:normal}
+    #fixed-dfig-v13 .profile-subtitle{font-size:24px;white-space:normal}
+  }
+
+  /* ===== Introduction section ===== */
+  #fixed-dfig-v13 .fd-links a{
+    color:#183c58;
+    text-decoration:none;
+    transition:color .25s ease;
+  }
+  #fixed-dfig-v13 .fd-links a:hover{color:#08798a}
+  .introduction-section{
+    padding:90px 8%;
+    background:#f4fbfd;
+    color:#102f49;
+    font-family:Georgia,"Times New Roman",serif;
+  }
+  .introduction-container{
+    width:min(100%,1050px);
+    margin:0 auto;
+    position:relative;
+  }
+  .introduction-profile-side{
+    position:absolute;
+    left:-398px;
+    top:0;
+    width:360px;
+    text-align:center;
+  }
+  .introduction-profile-side img{
+    display:block;
+    width:250px;
+    height:250px;
+    margin:0 auto 16px;
+    object-fit:cover;
+    object-position:center top;
+    border:0;
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(16,47,73,.18);
+  }
+  .introduction-profile-side h3{
+    margin:0;
+    color:#102f49;
+    white-space:nowrap;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:27px;
+    font-weight:700;
+    line-height:1.2;
+    letter-spacing:-.025em;
+  }
+  .introduction-profile-role{
+    margin:8px 0 17px;
+    color:#102f49;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:18px;
+    font-weight:700;
+    line-height:1.35;
+    white-space:nowrap;
+  }
+  .introduction-section h2{
+    margin:0 0 12px;
+    font-size:clamp(34px,4vw,48px);
+    color:#102f49;
+  }
+  .introduction-line{
+    width:75px;
+    height:4px;
+    margin-bottom:32px;
+    border-radius:4px;
+    background:#08798a;
+  }
+  .introduction-section p{
+    margin:0;
+    color:#365d78;
+    font-size:20px;
+    line-height:1.8;
+    text-align:justify;
+  }
+  @media(max-width:780px){
+    .introduction-section{padding:65px 24px}
+    .introduction-profile-side{
+      position:static;
+      width:min(100%,360px);
+      margin:0 auto 38px;
+    }
+    .introduction-profile-side img{width:220px;height:220px}
+    .introduction-profile-side h3{font-size:25px}
+    .introduction-profile-role{font-size:17px}
+    .introduction-section p{
+      font-size:18px;
+      line-height:1.7;
+      text-align:left;
+    }
+  }
+  @media(min-width:781px) and (max-width:1400px){
+    .introduction-profile-side{
+      position:static;
+      width:360px;
+      margin:0 0 38px;
+    }
+  }
+  @media(max-width:380px){
+    .introduction-profile-side h3{font-size:21px}
+    .introduction-profile-role{font-size:14px}
+  }
+
+  /* ===== Education section ===== */
+  .education-section{
+    padding:90px 8%;
+    background:#e8eef1;
+    color:#102f49;
+    font-family:Georgia,"Times New Roman",serif;
+  }
+  .education-container{
+    width:min(100%,1050px);
+    margin:0 auto;
+  }
+  .education-section h2{
+    margin:0 0 12px;
+    font-size:clamp(34px,4vw,48px);
+    color:#102f49;
+  }
+  .section-title-row{
+    display:flex;
+    align-items:center;
+    gap:17px;
+    margin-bottom:12px;
+  }
+  .section-title-row h2{margin:0}
+  .section-title-icon{
+    width:58px;
+    height:58px;
+    flex:0 0 58px;
+    display:grid;
+    place-items:center;
+    border-radius:16px;
+    color:#ffffff;
+    background:linear-gradient(145deg,#0b8794,#125474);
+    box-shadow:0 8px 20px rgba(16,84,116,.22);
+  }
+  .section-title-icon svg{
+    width:35px;
+    height:35px;
+    display:block;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2.2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  .education-list{
+    display:grid;
+    gap:22px;
+  }
+  .education-card{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:30px;
+    padding:28px 30px;
+    border-left:5px solid #08798a;
+    border-radius:0 12px 12px 0;
+    background:rgba(255,255,255,.72);
+    box-shadow:0 10px 28px rgba(16,47,73,.08);
+  }
+  .education-years{
+    color:#08798a;
+    font-size:20px;
+    font-weight:700;
+    line-height:1.3;
+  }
+  .education-card h3{
+    margin:0 0 5px;
+    color:#102f49;
+    font-size:24px;
+    line-height:1.25;
+  }
+  .education-institution{
+    margin:0 0 14px;
+    color:#294f69;
+    font-size:18px;
+    font-weight:700;
+  }
+  .education-detail{
+    margin:7px 0 0;
+    color:#365d78;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .education-detail strong{color:#183c58}
+  @media(max-width:780px){
+    .education-section{padding:65px 24px}
+    .section-title-row{gap:13px}
+    .section-title-icon{width:50px;height:50px;flex-basis:50px;border-radius:14px}
+    .section-title-icon svg{width:30px;height:30px}
+    .education-card{grid-template-columns:1fr;gap:8px;padding:24px}
+    .education-years{font-size:18px}
+    .education-card h3{font-size:22px}
+    .education-institution{font-size:17px}
+    .education-detail{font-size:16px}
+  }
+
+  /* ===== Work Experience section ===== */
+  .experience-section{
+    padding:90px 8%;
+    background:#f4fbfd;
+    color:#102f49;
+    font-family:Georgia,"Times New Roman",serif;
+  }
+  .experience-container{
+    width:min(100%,1050px);
+    margin:0 auto;
+  }
+  .experience-section h2{
+    margin:0 0 12px;
+    font-size:clamp(34px,4vw,48px);
+    color:#102f49;
+  }
+  .experience-list{
+    position:relative;
+    display:grid;
+    gap:24px;
+  }
+  .experience-list::before{
+    content:"";
+    position:absolute;
+    left:159px;
+    top:20px;
+    bottom:20px;
+    width:2px;
+    background:rgba(8,121,138,.28);
+  }
+  .experience-card{
+    position:relative;
+    display:grid;
+    grid-template-columns:130px 1fr;
+    gap:58px;
+  }
+  .experience-period{
+    padding-top:27px;
+    color:#08798a;
+    font-size:19px;
+    font-weight:700;
+    text-align:right;
+  }
+  .experience-content{
+    position:relative;
+    padding:26px 30px;
+    border-radius:12px;
+    background:rgba(255,255,255,.82);
+    box-shadow:0 10px 28px rgba(16,47,73,.08);
+  }
+  .experience-content::before{
+    content:"";
+    position:absolute;
+    left:-36px;
+    top:32px;
+    width:13px;
+    height:13px;
+    border:4px solid #f4fbfd;
+    border-radius:50%;
+    background:#08798a;
+    box-shadow:0 0 0 2px rgba(8,121,138,.28);
+  }
+  .experience-content h3{
+    margin:0 0 5px;
+    color:#102f49;
+    font-size:23px;
+    line-height:1.3;
+  }
+  .experience-company{
+    margin:0 0 13px;
+    color:#294f69;
+    font-size:18px;
+    font-weight:700;
+  }
+  .experience-content ul{
+    margin:0;
+    padding-left:22px;
+    color:#365d78;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .experience-content li+li{margin-top:6px}
+  @media(max-width:780px){
+    .experience-section{padding:65px 24px}
+    .experience-list::before{left:7px}
+    .experience-card{grid-template-columns:1fr;gap:8px;padding-left:28px}
+    .experience-period{padding-top:0;text-align:left;font-size:18px}
+    .experience-content{padding:24px}
+    .experience-content::before{left:-28px;top:30px}
+    .experience-content h3{font-size:22px}
+    .experience-company{font-size:17px}
+    .experience-content ul{font-size:16px}
+  }
+
+  /* ===== Mobile usability refinements ===== */
+  html,body{
+    max-width:100%;
+    overflow-x:hidden;
+    -webkit-text-size-adjust:100%;
+  }
+  img,svg{max-width:100%}
+  @media(max-width:780px){
+    #fixed-dfig-v13{min-height:790px}
+    #fixed-dfig-v13 .fd-nav{
+      min-height:250px;
+      padding:0 16px;
+    }
+    #fixed-dfig-v13 .energy-brand{
+      left:16px;
+      top:14px;
+      width:calc(100vw - 32px);
+    }
+    #fixed-dfig-v13 .energy-brand-text{
+      font-size:clamp(18px,5.35vw,24px);
+    }
+    #fixed-dfig-v13 .header-actions{
+      left:16px;
+      right:16px;
+      top:104px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+    }
+    #fixed-dfig-v13 .header-actions .fd-action{
+      min-width:0;
+      min-height:44px;
+      justify-content:center;
+      padding:0 9px;
+      font-size:12px;
+      white-space:nowrap;
+    }
+    #fixed-dfig-v13 .fd-links{
+      display:flex!important;
+      left:16px;
+      right:16px;
+      top:166px;
+      gap:18px;
+      padding:7px 0 11px;
+      overflow-x:auto;
+      overscroll-behavior-x:contain;
+      scrollbar-width:none;
+      white-space:nowrap;
+      font-size:12px;
+    }
+    #fixed-dfig-v13 .fd-links::-webkit-scrollbar{display:none}
+    #fixed-dfig-v13 .fd-links a,
+    #fixed-dfig-v13 .fd-links span{
+      flex:0 0 auto;
+      min-height:40px;
+      display:inline-flex;
+      align-items:center;
+    }
+    #fixed-dfig-v13 .fd-scene{
+      inset:auto auto 0 50%;
+      width:900px;
+      max-width:none;
+      height:540px;
+      transform:translateX(-50%);
+    }
+    .introduction-section,
+    .education-section,
+    .experience-section{
+      padding:52px 20px;
+    }
+    .introduction-profile-side{
+      width:min(100%,340px);
+      margin-bottom:34px;
+    }
+    .introduction-profile-side img{
+      width:210px;
+      height:210px;
+    }
+    .introduction-profile-side h3{font-size:23px}
+    .introduction-profile-role{font-size:15px}
+    .introduction-section p{
+      font-size:17px;
+      line-height:1.65;
+    }
+    .education-card,
+    .experience-content{padding:20px}
+  }
+  @media(max-width:360px){
+    #fixed-dfig-v13 .header-actions .fd-action{font-size:11px;padding:0 6px}
+    #fixed-dfig-v13 .fd-links{gap:15px;font-size:11px}
+    .introduction-profile-side h3{font-size:21px}
+    .introduction-profile-role{font-size:13px}
+  }
+
+</style>
+</head>
+<body>
+
+<section id="fixed-dfig-v13" aria-label="Portfolio hero with mechanically connected wind turbine and detailed converters">
+  <header class="fd-nav">
+    <div class="energy-brand" aria-label="Renewable Energy Technology">
+      <span class="energy-brand-mark" aria-hidden="true">
+        <img src="./renewable-energy-technology-logo-web.png" alt="" class="energy-brand-logo">
+      </span>
+      <span class="energy-brand-text">Renewable Energy Technology</span>
+    </div>
+
+    <nav class="fd-links" aria-label="Portfolio sections">
+      <a href="#introduction">Introduction</a><a href="#education">Education</a><a href="#experience">Experience</a><span>Expertise</span><span>Contact</span>
+    </nav>
+
+    <div class="header-actions">
+      <a class="fd-action primary" href="./Masoud-Ardeshiri-CV.pdf" download>↓ &nbsp; Download CV</a>
+      <a class="fd-action" href="mailto:masoud.ardeshiri.dokt@pw.edu.pl">✉ &nbsp; Email me</a>
+    </div>
+  </header>
+
+  <svg class="fd-scene" viewBox="0 0 1440 640" role="img" aria-labelledby="fd-title fd-desc">
+    <title id="fd-title">Wind rotor rigidly connected to a DFIG shaft and detailed power converters</title>
+    <desc id="fd-desc">The blade roots, hub, bearing and shaft share one exact center. The wind turbine, tower and DFIG are positioned left of the converters. The animated power-flow dots are smaller. The ESS half-bridge is enclosed in a rectangular converter frame matching the RSC and LSC. The battery uses the supplied visual style with a grey cap, orange body, plus sign, lightning symbol and minus sign.</desc>
+    <defs>
+      <linearGradient id="fd-air" x1="0" x2="1"><stop stop-color="#197c9a" stop-opacity="0"/><stop offset="1" stop-color="#197c9a"/></linearGradient>
+      <linearGradient id="fd-energy" x1="0" x2="1"><stop stop-color="#0796a2"/><stop offset="1" stop-color="#256caa"/></linearGradient>
+      <filter id="fd-glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <g id="fd-switch" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 0v7M10 21v7M5 8v12M10 7L6 11M6 17l4 4M0 14h5" stroke="#010609" stroke-width="2.2"/>
+        <path d="M17 6v16M13 10l4-4 4 4zM13 18h8M10 4h7v2M10 24h7v-2" stroke="#010609" stroke-width="2.2"/>
+      </g>
+    </defs>
+
+    <!-- Animated wind approaches the blade plane from the left. -->
+    <g fill="none" stroke="url(#fd-air)" stroke-width="2" stroke-linecap="round" opacity=".58">
+      <path class="fd-wind" d="M135 78C205 67 290 73 382 91"/>
+      <path class="fd-wind b" d="M112 139C200 122 292 132 390 152"/>
+      <path class="fd-wind" d="M118 205C206 190 298 196 394 209"/>
+      <path class="fd-wind b" d="M140 278C215 258 300 263 382 280"/>
+    </g>
+
+    <!-- The complete technical structure is shifted toward the center and upward. -->
+    <g transform="translate(15 -22)">
+    <!-- Turbine, tower and DFIG are moved left of the converter chain. -->
+    <g transform="translate(-145 0)">
+    <!-- One rigid mechanical axis: hub center = bearing center = shaft center = generator-rotor center. -->
+    <g stroke-linecap="round" stroke-linejoin="round">
+      <!-- Tapered tubular tower with smooth sides and a completely flat base -->
+      <path d="M875 238C874 324 868 438 860 532H911C903 438 897 324 896 238Z" fill="rgba(255,255,255,.30)" stroke="#78acb5" stroke-width="4"/>
+
+      <!-- Capsule-shaped nacelle: its left rounded end shares the hub center -->
+      <path d="M810 158H1001C1030 158 1048 177 1048 205S1030 252 1001 252H810A47 47 0 0 1 810 158Z" fill="#9ed7ea" stroke="#79aab5" stroke-width="3"/>
+
+      <!-- Large front bearing at the left end of the nacelle -->
+      <circle cx="810" cy="205" r="47" fill="#e7f8fb" stroke="#08798a" stroke-width="4"/>
+
+      <!-- Shaft runs through the front bearing into the generator -->
+      <path d="M810 205H938" fill="none" stroke="#c0eee6" stroke-width="8"/>
+      <path d="M810 205H938" fill="none" stroke="#244d61" stroke-width="3"/>
+
+      <!-- External cylindrical rotor shaft projecting from the nacelle -->
+      <path d="M650 187H809C821 187 828 194 828 205S821 223 809 223H650Z" fill="#e7f8fb" stroke="#071b25" stroke-width="3"/>
+      
+
+      <!-- Three long, tapered aerodynamic blades and the hub rotate at the outer shaft end. -->
+      <g class="fd-rotor">
+        <g fill="rgba(231,248,251,.88)" stroke="#147d89" stroke-width="3">
+          <path d="M644 191C641 158 637 111 640 70C642 43 647 26 653 22C660 32 660 50 657 75C653 116 650 158 656 191Z"/>
+          <path d="M644 191C641 158 637 111 640 70C642 43 647 26 653 22C660 32 660 50 657 75C653 116 650 158 656 191Z" transform="rotate(120 650 205)"/>
+          <path d="M644 191C641 158 637 111 640 70C642 43 647 26 653 22C660 32 660 50 657 75C653 116 650 158 656 191Z" transform="rotate(240 650 205)"/>
+        </g>
+        <circle cx="650" cy="205" r="24" fill="#e7f8fb" stroke="#08798a" stroke-width="4"/>
+        <path class="fd-rotation-mark" d="M650 205L645 184H655Z"/>
+        <circle cx="650" cy="205" r="10" fill="#08798a"/>
+        <circle cx="650" cy="205" r="4" fill="#123b52"/>
+        <circle cx="650" cy="187" r="3.5" fill="#f28c28"/>
+      </g>
+
+      <!-- Generator represented by two concentric circles inside the capsule -->
+      <circle cx="938" cy="205" r="48" fill="rgba(255,255,255,.30)" stroke="#679aa8" stroke-width="3"/>
+      <circle cx="938" cy="205" r="35" fill="#e7f8fb" stroke="#8ac6c6" stroke-width="3"/>
+      <g class="fd-genrotor" fill="none" stroke="#08798a" stroke-width="2.5">
+        <circle cx="938" cy="205" r="22"/><path d="M938 183v12M938 215v12M916 205h12M948 205h12"/><path class="fd-rotation-mark" d="M938 205L932 180H944Z"/><circle cx="938" cy="205" r="7" fill="#f28c28" stroke="none"/>
+      </g>
+      
+    </g>
+    </g>
+
+    <!-- DFIG stator is connected directly to the three-phase PCC / load bus. -->
+    <g fill="none" stroke="#315f78" stroke-width="1.8">
+      <path d="M839 190H1320"/>
+      <path d="M841 205H1320"/>
+      <path d="M839 220H1320"/>
+    </g>
+    <g fill="none" stroke="url(#fd-energy)" stroke-width="2.6" filter="url(#fd-glow)">
+      <path class="fd-flow" d="M839 190H1320"/>
+      <path class="fd-flow phase-b" d="M841 205H1320"/>
+      <path class="fd-flow phase-c" d="M839 220H1320"/>
+    </g>
+    <g fill="#08798a" stroke="#071b25" stroke-width="1.2">
+      <circle cx="839" cy="190" r="3.2"/><circle cx="841" cy="205" r="3.2"/><circle cx="839" cy="220" r="3.2"/>
+    </g>
+    
+    <g transform="translate(1320 165)">
+      <rect width="95" height="80" rx="8" fill="rgba(255,255,255,.42)" stroke="#071b25" stroke-width="2"/>
+      <!-- Grid tower and AC-load waveform icon; no phase lines continue inside the frame. -->
+      <g fill="none" stroke="#071b25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M31 12L19 53H43Z M24 34H38 M22 43H40 M31 12V53 M24 24H38"/>
+        <path d="M53 35h7c3-10 6 10 9 0s6 10 9 0 6 10 9 0"/>
+      </g>
+      
+    </g>
+
+    <!-- Three-phase pickup is taken from the rotating DFIG rotor, drops vertically, then turns 90 degrees into the RSC. -->
+    <g fill="none" stroke="#315f78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M785 243V392H864"/>
+              <path d="M793 244V406H864"/>
+              <path d="M801 243V420H864"/>
+    </g>
+    <g fill="none" stroke="url(#fd-energy)" stroke-width="2.6" filter="url(#fd-glow)">
+              <path class="fd-flow" d="M785 243V392H864"/>
+              <path class="fd-flow phase-b" d="M793 244V406H864"/>
+              <path class="fd-flow phase-c" d="M801 243V420H864"/>
+    </g>
+    <!-- Slip-ring pickup points on the rotating rotor and phase terminals at the RSC. -->
+    <g fill="#08798a" stroke="#071b25" stroke-width="1.2">
+              <circle cx="785" cy="239" r="4"/><circle cx="793" cy="240" r="4"/><circle cx="801" cy="239" r="4"/>
+      <circle cx="864" cy="392" r="3.2"/><circle cx="864" cy="406" r="3.2"/><circle cx="864" cy="420" r="3.2"/>
+    </g>
+    
+    
+
+    <!-- RSC, common DC link and LSC: each bridge shows six IGBT/diode switch cells. -->
+    <g transform="translate(784 350)" font-family="Inter, sans-serif">
+      
+      <g transform="translate(80 0)">
+        <rect width="150" height="126" rx="8" fill="rgba(255,255,255,.48)" stroke="#6f9daa" stroke-width="2"/>
+        
+        <path d="M18 16H132M18 110H132" fill="none" stroke="#81b7bf" stroke-width="2"/>
+        <g transform="translate(29 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g><g transform="translate(69 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g><g transform="translate(109 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g>
+        <g fill="none" stroke="#071b25" stroke-width="1.7"><path d="M39 16v2M39 46v20M39 94v16M79 16v2M79 46v20M79 94v16M119 16v2M119 46v20M119 94v16"/></g>
+        <g fill="#08798a" font-size="8"></g>
+        <g fill="#748fa2" font-size="6"></g>
+      </g>
+
+      <path d="M230 16H324M230 110H324" fill="none" stroke="#83b3be" stroke-width="2"/><path class="fd-flow" d="M230 16H324M324 110H230" fill="none" stroke="#86eadb" stroke-width="2.7"/>
+      <path d="M277 16V59M265 59h24M265 67h24M277 67V110" fill="none" stroke="#08798a" stroke-width="2.4"/>
+
+      <g transform="translate(324 0)">
+        <rect width="150" height="126" rx="8" fill="rgba(255,255,255,.48)" stroke="#6f9daa" stroke-width="2"/>
+        
+        <path d="M18 16H132M18 110H132" fill="none" stroke="#81b7bf" stroke-width="2"/>
+        <g transform="translate(29 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g><g transform="translate(69 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g><g transform="translate(109 18)"><use href="#fd-switch"/><use href="#fd-switch" y="48"/></g>
+        <g fill="none" stroke="#071b25" stroke-width="1.7"><path d="M39 16v2M39 46v20M39 94v16M79 16v2M79 46v20M79 94v16M119 16v2M119 46v20M119 94v16"/></g>
+        <g fill="#08798a" font-size="8"></g>
+        <g fill="#748fa2" font-size="6"></g>
+      </g>
+
+      <!-- LSC three-phase output rises and joins the same PCC bus as the DFIG stator. -->
+      <g fill="none" stroke="#315f78" stroke-width="1.8">
+        <path d="M474 42H500V-160"/>
+        <path d="M474 56H512V-145"/>
+        <path d="M474 70H524V-130"/>
+      </g>
+      <g fill="none" stroke="url(#fd-energy)" stroke-width="2.6" filter="url(#fd-glow)">
+        <path class="fd-flow" d="M474 42H500V-160"/>
+        <path class="fd-flow phase-b" d="M474 56H512V-145"/>
+        <path class="fd-flow phase-c" d="M474 70H524V-130"/>
+      </g>
+      <g fill="#08798a"><circle cx="500" cy="-160" r="3.2"/><circle cx="512" cy="-145" r="3.2"/><circle cx="524" cy="-130" r="3.2"/></g>
+      
+
+      <!-- Battery converter is connected directly across the DC link. The switches, inductor and capacitor are enclosed in one frame. -->
+      <g stroke-linecap="round" stroke-linejoin="round">
+        <!-- The two DC-link connections stop at the converter-frame boundaries. -->
+        <path d="M245 16V154M309 110V154" fill="none" stroke="#071b25" stroke-width="2"/>
+        <path class="fd-flow" d="M245 16V154" fill="none" stroke="#007f8f" stroke-width="3.2"/>
+        <path class="fd-flow phase-b" d="M309 110V154" fill="none" stroke="#007f8f" stroke-width="3.2"/>
+
+        <!-- The complete battery converter is shifted slightly downward. -->
+        <g transform="translate(0 18)">
+        <!-- Complete battery-converter enclosure -->
+        <rect x="150" y="136" width="270" height="118" rx="8" fill="rgba(255,255,255,.48)" stroke="#071b25" stroke-width="2"/>
+
+        <!-- Half-bridge switch leg inside the frame -->
+        <g transform="translate(190 145)"><use href="#fd-switch"/></g>
+        <g transform="translate(190 193)"><use href="#fd-switch"/></g>
+        <path d="M200 173V183M200 183V193M200 221V238M200 183H250" fill="none" stroke="#071b25" stroke-width="2"/>
+        <circle cx="200" cy="183" r="3.2" fill="#071b25" stroke="none"/>
+
+        <!-- ESS inductor inside the same enclosure -->
+        <path d="M250 183q6-12 12 0t12 0t12 0t12 0H320" fill="none" stroke="#071b25" stroke-width="2.2"/>
+
+        <!-- ESS capacitor and lower return bus inside the same enclosure -->
+        <path d="M320 183H420M200 238H420M330 183V202M319 202H341M319 210H341M330 210V238" fill="none" stroke="#071b25" stroke-width="2"/>
+
+        <!-- Two output terminals leave the frame and connect to the battery -->
+        <path d="M420 183H470M420 238H470" fill="none" stroke="#071b25" stroke-width="2"/>
+
+        <!-- Battery remains outside the converter frame. -->
+        <g transform="translate(470 174)">
+          <rect x="7" y="0" width="10" height="6" rx="1" fill="#697177" stroke="#071b25" stroke-width="1"/>
+          <rect x="43" y="0" width="10" height="6" rx="1" fill="#697177" stroke="#071b25" stroke-width="1"/>
+          <rect x="0" y="5" width="60" height="66" rx="4" fill="#f28c28" stroke="#071b25" stroke-width="2"/>
+          <path d="M0 20H60" stroke="#4f565b" stroke-width="14"/>
+          <path class="battery-mark" d="M9 44h11M14.5 38.5v11M42 44h10" stroke="#ffffff" stroke-width="2.7"/>
+          <path d="M34 31l-7 13h7l-5 13 13-17h-7l5-9z" fill="#ffffff" stroke="none"/>
+        </g>
+        
+
+        <!-- Animated bidirectional flow remains inside the framed converter and battery branch. -->
+        <path class="fd-flow" d="M200 145V183H470" fill="none" stroke="#007f8f" stroke-width="3.2"/>
+        <path class="fd-flow phase-b" d="M470 238H200" fill="none" stroke="#007f8f" stroke-width="3.2"/>
+        </g>
+      </g>
+    </g>
+
+    <g fill="#315f78" font-size="9" letter-spacing="1.35" opacity=".72"></g>
+    </g>
+  </svg>
+
+</section>
+
+<section class="introduction-section" id="introduction">
+  <div class="introduction-container">
+    <aside class="introduction-profile-side" aria-label="Profile">
+      <img src="./profile.png.png?v=20260923-2" alt="Dr. Masoud Ardeshiri">
+      <h3>Dr. Masoud Ardeshiri</h3>
+      <div class="introduction-profile-role">Phd Researcher in Electrical Engineer</div>
+    </aside>
+
+    <h2>Introduction</h2>
+    <div class="introduction-line"></div>
+
+    <p>
+      My name is Masoud Ardeshiri, and I was born in Shiraz, Iran, in 1984. I am presently a doctoral researcher in Electrical Engineering, specializing in electric drives and power electronics. I received my B.Sc. degree in Electrical Engineering, with a specialization in Power Systems, from Iran Azad University, Shiraz Branch, in 2013. I subsequently received my M.Sc. degree in Electrical Engineering, also specializing in Power Systems, from Iran Azad University, Kazeroon Branch, in 2017. I am currently pursuing my Ph.D. at the Faculty of Electrical Engineering of Warsaw University of Technology, within the discipline of Automation, Electronics, Electrical Engineering and Space Technologies, with graduation expected in 2027. My research focuses on advanced control methods for synchronous and asynchronous electric drives, power electronic converters, battery energy-storage systems, and renewable-energy applications. I have experience developing energy-management strategies for wind-energy conversion systems, particularly for controlling and optimizing battery charging and discharging. I am also experienced in the modelling, simulation, analysis, control, and parameter optimization of electrical and renewable-energy systems, including wind and photovoltaic generation systems. My technical software expertise includes MATLAB/Simulink, PLECS, and PSIM. As part of my doctoral research project, I have developed and analyzed a comprehensive simulation model of a stand-alone doubly fed induction generator (DFIG) wind-energy conversion system integrated with a hybrid battery–supercapacitor energy-storage system. This project encompasses the modelling of the wind turbine, DFIG, back-to-back power-electronic converters, DC-link, three-phase load, and energy-storage interface; the design of coordinated control systems for stator voltage, load voltage, converter currents, and DC-link voltage; the development of energy-management strategies for battery charging and discharging; and the evaluation of system performance under balanced and unbalanced loading conditions across sub-synchronous and super-synchronous operating modes.
+    </p>
+  </div>
+</section>
+
+<section class="education-section" id="education">
+  <div class="education-container">
+    <div class="section-title-row">
+      <span class="section-title-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48">
+          <path d="M5 18 24 8l19 10-19 10L5 18Z"/>
+          <path d="M13 23v10c5.7 5.3 16.3 5.3 22 0V23"/>
+          <path d="M43 19v12"/>
+          <path d="M40.5 34h5"/>
+        </svg>
+      </span>
+      <h2>Education</h2>
+    </div>
+    <div class="introduction-line"></div>
+
+    <div class="education-list">
+      <article class="education-card">
+        <div class="education-years">2021–Present</div>
+        <div>
+          <h3>Ph.D. in Electrical Engineering</h3>
+          <p class="education-institution">Warsaw University of Technology · Warsaw, Poland</p>
+          <p class="education-detail"><strong>Research focus:</strong> Renewable energy systems, including wind turbines and photovoltaic systems; energy management; control of power-electronic converters; and electric drives.</p>
+          <p class="education-detail"><strong>Thesis:</strong> Analysis of Power Generation Systems Supported by Hybrid Battery–Supercapacitor Energy Storage Systems.</p>
+        </div>
+      </article>
+
+      <article class="education-card">
+        <div class="education-years">2015–2017</div>
+        <div>
+          <h3>M.Sc. in Electrical Engineering</h3>
+          <p class="education-institution">Iran Azad University, Kazeroon Branch · Iran</p>
+          <p class="education-detail"><strong>Research focus:</strong> Renewable energy, power electronics, control, and electric drives.</p>
+          <p class="education-detail"><strong>Thesis:</strong> Active and Reactive Power Control in DFIG-Based Wind Turbines Using a Type-2 Fuzzy Logic Controller Tuned by the PSO Algorithm.</p>
+        </div>
+      </article>
+
+      <article class="education-card">
+        <div class="education-years">2011–2013</div>
+        <div>
+          <h3>B.Sc. in Electrical Engineering</h3>
+          <p class="education-institution">Iran Azad University, Shiraz Branch · Iran</p>
+          <p class="education-detail"><strong>Research focus:</strong> Power systems and power-system analysis.</p>
+          <p class="education-detail"><strong>Thesis:</strong> Power Transformer Fault Diagnosis Using Dissolved Gas Analysis.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="experience-section" id="experience">
+  <div class="experience-container">
+    <div class="section-title-row">
+      <span class="section-title-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48">
+          <path d="M7 16h34a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V19a3 3 0 0 1 3-3Z"/>
+          <path d="M16 16v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4"/>
+          <path d="M4 26c10 5 30 5 40 0"/>
+          <path d="M20 25h8v7h-8z"/>
+        </svg>
+      </span>
+      <h2>Work Experience</h2>
+    </div>
+    <div class="introduction-line"></div>
+
+    <div class="experience-list">
+      <article class="experience-card">
+        <div class="experience-period">2019–2020</div>
+        <div class="experience-content">
+          <h3>Junior Electrical Engineer</h3>
+          <p class="experience-company">Oil Refinery Company · Shiraz, Fars, Iran</p>
+          <ul>
+            <li>Designed and implemented internal cabling and wiring for boiler and water-treatment units.</li>
+            <li>Performed maintenance and troubleshooting of internal electrical networks to support reliable and uninterrupted operation.</li>
+            <li>Collaborated with engineering teams to improve system reliability and electrical safety.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-period">2013–2014</div>
+        <div class="experience-content">
+          <h3>Junior Electrical Engineer</h3>
+          <p class="experience-company">Petrochemical Company · Shiraz, Fars, Iran</p>
+          <ul>
+            <li>Assisted with wiring and cabling for the main complex electrical installations and control rooms.</li>
+            <li>Reviewed and interpreted electrical schematics for installation and commissioning activities.</li>
+            <li>Supported troubleshooting operations to minimize downtime and improve operational efficiency.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-period">2011–2012</div>
+        <div class="experience-content">
+          <h3>Electrical Engineer Intern</h3>
+          <p class="experience-company">Central Electricity Authority · Shiraz, Fars, Iran</p>
+          <ul>
+            <li>Assisted with the operation and maintenance of high- and medium-voltage substations.</li>
+            <li>Analyzed electrical power-consumption patterns to support performance optimization.</li>
+            <li>Participated in overhaul and maintenance projects and gained practical experience with DIgSILENT simulation software.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-period">2006–2007</div>
+        <div class="experience-content">
+          <h3>Electrical Engineer Intern</h3>
+          <p class="experience-company">Oil Refinery Company · Shiraz, Fars, Iran</p>
+          <ul>
+            <li>Assisted with the installation, commissioning, and maintenance of internal electrical networks.</li>
+            <li>Developed familiarity with gas-turbine unit control-board wiring and functionality.</li>
+            <li>Maintained and updated operational records and technical documentation.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Add the Expertise and Contact sections below this line. -->
+</body>
+</html>
